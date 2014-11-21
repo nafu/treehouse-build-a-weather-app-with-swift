@@ -59,6 +59,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcatraz Island, CS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTu-ER-hM0">
+                                <rect key="frame" x="104" y="109" width="179" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy-night" translatesAutoresizingMaskIntoConstraints="NO" id="vVm-f6-vma">
                                 <rect key="frame" x="38" y="92" width="60" height="60"/>
                                 <constraints>
@@ -66,12 +72,21 @@
                                     <constraint firstAttribute="width" constant="60" id="kyy-n7-4E1"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcatraz Island, CS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTu-ER-hM0">
-                                <rect key="frame" x="104" y="109" width="179" height="26"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhT-P3-qjO">
+                                <rect key="frame" x="140" y="28" width="43" height="43"/>
+                                <state key="normal" image="refresh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QbK-90-AZb"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="s79-Y8-2G0">
+                                <rect key="frame" x="151" y="40" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degree" translatesAutoresizingMaskIntoConstraints="NO" id="hLS-zx-Lra">
+                                <rect key="frame" x="268" y="206" width="36" height="36"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -82,10 +97,16 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jqe-FH-Y8Z" secondAttribute="bottom" constant="90" id="Caa-ww-hf0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pL0-xV-WEs" secondAttribute="trailing" constant="36" id="Eth-6c-YXH"/>
                             <constraint firstItem="vVm-f6-vma" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="H7A-uc-dll"/>
+                            <constraint firstItem="FhT-P3-qjO" firstAttribute="centerX" secondItem="s79-Y8-2G0" secondAttribute="centerX" constant="0.5" id="HUG-71-9Qu"/>
                             <constraint firstItem="wKu-2k-ERx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="I2g-F3-8Pc"/>
+                            <constraint firstItem="FhT-P3-qjO" firstAttribute="centerY" secondItem="s79-Y8-2G0" secondAttribute="centerY" constant="-0.5" id="JAG-Qs-ZcD"/>
+                            <constraint firstItem="tTu-ER-hM0" firstAttribute="top" secondItem="FhT-P3-qjO" secondAttribute="bottom" constant="38" id="JCN-At-QFe"/>
                             <constraint firstItem="tTu-ER-hM0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="KHc-eg-n4G"/>
+                            <constraint firstItem="VXy-gG-fTj" firstAttribute="top" secondItem="hLS-zx-Lra" secondAttribute="bottom" constant="-27" id="Mk7-rr-cUJ"/>
+                            <constraint firstItem="hLS-zx-Lra" firstAttribute="leading" secondItem="VXy-gG-fTj" secondAttribute="trailing" constant="7" id="RHA-b8-Knr"/>
                             <constraint firstItem="tTu-ER-hM0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="RQp-r2-mtq"/>
                             <constraint firstItem="pL0-xV-WEs" firstAttribute="top" secondItem="Dna-br-tuS" secondAttribute="bottom" constant="10" id="ZKt-h8-Zy6"/>
+                            <constraint firstAttribute="centerX" secondItem="FhT-P3-qjO" secondAttribute="centerX" constant="-1.5" id="ZeR-bD-mQF"/>
                             <constraint firstAttribute="centerX" secondItem="S09-Uv-0kb" secondAttribute="centerX" id="bwW-OC-TOJ"/>
                             <constraint firstAttribute="centerY" secondItem="VXy-gG-fTj" secondAttribute="centerY" id="dBQ-pH-ldE"/>
                             <constraint firstAttribute="centerX" secondItem="vVm-f6-vma" secondAttribute="centerX" constant="92" id="e1d-2Q-dT6"/>
@@ -102,6 +123,8 @@
                         <outlet property="humidityLabel" destination="B6L-xp-gbg" id="VJd-Ie-Yml"/>
                         <outlet property="iconView" destination="vVm-f6-vma" id="v04-CE-e2Z"/>
                         <outlet property="precipitationLabel" destination="pL0-xV-WEs" id="GKc-Lv-dNO"/>
+                        <outlet property="refreshActivityIndicator" destination="s79-Y8-2G0" id="g8e-us-SyX"/>
+                        <outlet property="refreshButton" destination="FhT-P3-qjO" id="bnh-YE-Yeu"/>
                         <outlet property="summaryLabel" destination="jqe-FH-Y8Z" id="jKw-C4-Fmq"/>
                         <outlet property="temperatureLabel" destination="VXy-gG-fTj" id="hSO-fV-dKr"/>
                     </connections>
@@ -113,6 +136,8 @@
     </scenes>
     <resources>
         <image name="cloudy-night" width="46" height="43"/>
+        <image name="degree" width="36" height="36"/>
+        <image name="refresh" width="43" height="43"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
