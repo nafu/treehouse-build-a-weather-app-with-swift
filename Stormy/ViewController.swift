@@ -35,6 +35,22 @@ class ViewController: UIViewController {
 		let sharedSession = NSURLSession.sharedSession()
 		let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithRequest(NSURLRequest(URL: forecastURL!), completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
 			if (error != nil) {
+				let networkIssueController = UIAlertController(title: "Error", message: "Unable to load data, Connectivity error!", preferredStyle: .Alert)
+				let okButton = UIAlertAction(title: "OK", style: .Default, handler: nil)
+				networkIssueController.addAction(okButton)
+
+				let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+				networkIssueController.addAction(cancelButton)
+
+				self.presentViewController(networkIssueController, animated: true, completion: nil)
+
+				dispatch_async(dispatch_get_main_queue(), { () -> Void in
+					// Stop refresh animation
+					self.refreshActivityIndicator.stopAnimating()
+					self.refreshActivityIndicator.hidden = true
+					self.refreshButton.hidden = false
+				})
+
 				return println(error)
 			}
 
